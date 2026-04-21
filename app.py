@@ -17,7 +17,7 @@ mensajes_contacto = []
 def contacto():
     if request.method == "POST":
         nombre = request.form.get("nombre", "").strip()
-        email = request.form.get("email", "").strip()
+        email = request.form.get("correo", "").strip()
         mensaje = request.form.get("mensaje", "").strip()
 
         errores = []
