@@ -1,0 +1,217 @@
+{% extends "base.html" %} 
+
+{% block bodyattrs %}class="index-body" id="content" {% endblock %} 
+
+{% block content %}
+
+<section class="bienvenidos">
+  <div class="texto-encabezado text-center">
+    <div class="container">
+      <h1 class="display-4">Tech Solutions</h1>
+      <p>
+        Desarrollamos soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.
+      </p>
+      <a href="{{ url_for('contacto') }}" class="btn btn-primary btn-lg"
+        >Ponte en contacto</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="agencia py-2" id="agencia" data-scroll>
+    <div class="container">
+        <h2 class="h3 text-center font-weight-bold wow fadeInDown" >Título de la descripción de tu empresa</h2>
+
+        <div class="row">
+
+            <div  class="col-12 col-md-8 col-xl-9 wow bounceIn" data-wow-delay=".3s"  >
+            <p class="text-justify">Somos una empresa especializada en desarrollo de software a medida, aplicaciones web y móviles. Nuestro equipo de programadores expertos utiliza las últimas tecnologías para crear soluciones eficientes y escalables que se adaptan a las necesidades específicas de cada cliente. Desde el diseño hasta la implementación y mantenimiento, nos encargamos de todo el proceso de desarrollo.</p>
+            <p>
+                <ul>
+                    <li>Desarrollo de aplicaciones web y móviles.</li>
+                    <li>Consultoría en tecnologías de la información.</li>
+                    <li>Soluciones de software personalizadas.</li>
+                </ul>
+            </p>
+            <p class="font-weight-bold">Innovación tecnológica para tu negocio.</p>
+        </div>
+
+        <div class="col-12 col-md-4 col-xl-3">
+            <img class="wow bounceIn" data-wow-delay=".3s"  src="{{ url_for('static', filename='img/img2.svg') }}"  alt="agencia">
+        </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="tu-mejor-eleccion py-1">
+  <div class="container">
+    <h2 class="h3 text-center font-weight-bold color-span-1">
+      <span>¿Por qué somos tu mejor elección?</span>
+    </h2>
+    <div class="row">
+      <ul class="col-12 col-lg-6 text-center text-lg-left">
+        <li>
+          <i class="fa fa-suitcase" aria-hidden="true"></i>
+          <div class="contenedor-eleccion">
+            <h4>Experiencia comprobada.</h4>
+            <p class="d-none d-lg-flex text-justify">
+              Más de 10 años desarrollando soluciones tecnológicas para diversos sectores.
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <div class="contenedor-eleccion">
+            <h4>Equipo especializado.</h4>
+            <p class="d-none d-lg-flex text-justify">
+              Programadores, diseñadores y analistas trabajando en conjunto.
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="fa fa-cog" aria-hidden="true"></i>
+          <div class="contenedor-eleccion">
+            <h4>Tecnologías modernas.</h4>
+            <p class="d-none d-lg-flex text-justify">
+              Utilizamos las últimas herramientas y frameworks para desarrollo.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="col-12 col-lg-6 text-center text-lg-right">
+        <li>
+          <i class="fa fa-mobile" aria-hidden="true"></i>
+          <div class="contenedor-eleccion">
+            <h4>Desarrollo móvil.</h4>
+            <p class="d-none d-lg-flex text-justify">
+              Aplicaciones nativas y multiplataforma para iOS y Android.
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="fa fa-server" aria-hidden="true"></i>
+          <div class="contenedor-eleccion">
+            <h4>Soluciones en la nube.</h4>
+            <p class="d-none d-lg-flex text-justify">
+              Infraestructura escalable y segura en plataformas cloud.
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <div class="contenedor-eleccion">
+            <h4>Soporte continuo.</h4>
+            <p class="d-none d-lg-flex text-justify">
+              Mantenimiento y actualizaciones para mantener tu software al día.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="servicios py-2">
+  <div class="container">
+    <h2 class="text-center font-weight-bold color-span-2">
+      Nuestros Servicios
+    </h2>
+    <div class="row">
+      <article class="col-md-4 col-lg-4">
+        <img
+          src="{{ url_for('static', filename='img/Desarrollo_Medida.svg') }}"
+          alt="servicio 1"
+        />
+        <h3>Servicio 1</h3>
+        <p class="d-none d-md-flex text-justify">
+          Desarrollo de aplicaciones web personalizadas utilizando tecnologías modernas como React, Node.js y bases de datos NoSQL.
+        </p>
+        <a
+          href="{{ url_for('contacto') }}"
+          class="btn btn-info d-none d-md-flex"
+          >Más información</a
+        >
+      </article>
+      <article class="col-md-4 col-lg-4">
+        <img
+          src="{{ url_for('static', filename='img/Startup.svg') }}"
+          alt="servicio 2"
+        />
+        <h3>Servicio 2</h3>
+        <p class="d-none d-md-flex text-justify">
+          Acompañamiento completo desde la idea inicial hasta el lanzamiento de tu startup tecnológica, incluyendo MVP y escalabilidad.
+        </p>
+        <a
+          href="{{ url_for('contacto') }}"
+          class="btn btn-info d-none d-md-flex"
+          >Más información</a
+        >
+      </article>
+      <article class="col-md-4 col-lg-4">
+        <img
+          src="{{ url_for('static', filename='img/Conferencias.svg') }}"
+          alt="servicio 3"
+        />
+        <h3>Servicio 3</h3>
+        <p class="d-none d-md-flex text-justify">
+          Capacitación especializada en desarrollo de software, lenguajes de programación y mejores prácticas para equipos técnicos.
+        </p>
+        <a
+          href="{{ url_for('contacto') }}"
+          class="btn btn-info d-none d-md-flex"
+          >Más información</a
+        >
+      </article>
+
+      <article class="col-md-4 col-lg-4">
+        <img
+          src="{{ url_for('static', filename='img/Talleres.svg') }}"
+          alt="servicio 4"
+        />
+        <h3>servicio 4</h3>
+        <p class="d-none d-md-flex text-justify">
+          Talleres prácticos de desarrollo de software, desde conceptos básicos hasta tecnologías avanzadas como IA y machine learning.
+        </p>
+        <a
+          href="{{ url_for('contacto') }}"
+          class="btn btn-info d-none d-md-flex"
+          >Más información</a
+        >
+      </article>
+      <article class="col-md-4 col-lg-4">
+        <img
+          src="{{ url_for('static', filename='img/Profesionales.svg') }}"
+          alt="servicio 5"
+        />
+        <h3>Servicio 5</h3>
+        <p class="d-none d-md-flex text-justify">
+          Equipo de programadores altamente calificados con experiencia en múltiples tecnologías y metodologías ágiles.
+        </p>
+        <a
+          href="{{ url_for('contacto') }}"
+          class="btn btn-info d-none d-md-flex"
+          >Más información</a
+        >
+      </article>
+      <article class="col-md-4 col-lg-4">
+        <img
+          src="{{ url_for('static', filename='img/Servicios_I.svg') }}"
+          alt="servicio 6"
+        />
+        <h3>Servicio 6</h3>
+        <p class="d-none d-md-flex text-justify">
+          Servicios integrales de TI incluyendo consultoría, migración a la nube, ciberseguridad y optimización de sistemas.
+        </p>
+        <a
+          href="{{ url_for('contacto') }}"
+          class="btn btn-info d-none d-md-flex"
+          >Más información</a
+        >
+      </article>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

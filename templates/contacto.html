@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block bodyattrs %}class="paginas-internas"{% endblock %}
+
+{% block nav_contacto %}class="active"{% endblock %}
+
+{% block content %}
+
+<section class="bienvenidos">
+  <div class="texto-encabezado text-center">
+    <div class="container">
+      <h1 class="display-4">Contáctanos</h1>
+      <p>
+        ¿Tienes un proyecto en mente? Contáctanos y hablemos sobre cómo podemos
+        ayudarte.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- encabezado-->
+<section class="ruta p-3"></section>
+
+<main class="p-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Formulario de contacto</h2>
+        <p>
+          Completa el formulario y nos pondremos en contacto contigo lo antes
+          posible.
+        </p>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ 'success' if category == 'success' else 'danger' }}"
+        >
+          {{ message }}
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <form method="post" action="{{ url_for('contacto') }}">
+          <div class="form-group row">
+            <label for="nombre" class="col-md-4 col-form-label"
+              ><i class="fa fa-user" aria-hidden="true"></i> Nombre:</label
+            >
+            <div class="col-md-8">
+              <input
+                class="form-control"
+                type="text"
+                name="nombre"
+                required
+                placeholder="Escribe tu nombre"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="email" class="col-md-4 col-form-label"
+              ><i class="fa fa-envelope-o" aria-hidden="true"></i> Email:</label
+            >
+            <div class="col-md-8">
+              <input
+                class="form-control"
+                type="email"
+                name="correo"
+                required
+                placeholder="Escribe tu email"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="mensaje" class="col-md-4 col-form-label"
+              ><i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+              Mensaje:</label
+            >
+            <div class="col-md-8">
+              <textarea
+                class="form-control"
+                rows="5"
+                required
+                name="mensaje"
+                placeholder="Escribe tu mensaje"
+              ></textarea>
+              <div class="pd-top">
+                <button type="submit" name="enviar" class="btn btn-primary">
+                  Enviar
+                </button>
+                <button type="reset" class="btn btn-secondary">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-4 wow fadeInRight" data-wow-delay=".3s">
+        <h2>Detalles de Contacto</h2>
+        <img
+          src="{{ url_for('static', filename='img/App_Plataforma.svg') }}"
+          height="330"
+          width="330"
+          alt="Methriks"
+          class="img-thumbnail"
+        />
+        <p></p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

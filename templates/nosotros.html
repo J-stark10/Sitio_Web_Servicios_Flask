@@ -1,0 +1,59 @@
+{% extends "base.html" %} 
+
+{% block nav_nosotros %}class="active"{% endblock %}
+
+{% block content %}
+
+<section class="bienvenidos">
+  <div class="texto-encabezado text-center">
+    <div class="container">
+      <h1 class="display-4">¿Quiénes somos?</h1>
+      <p>
+        Conoce más sobre nuestra empresa y el equipo detrás de tus soluciones
+        tecnológicas.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- encabezado-->
+<section class="ruta p-3"></section>
+
+<main class="p-3">
+  <div class="container">
+    <div class="row">
+      <article class="col-12 col-md-8">
+        <h2 class="font-weight-bold">
+          Somos TechSolutions
+          <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+        </h2>
+        <p class="text-justify">
+          TechSolutions es una empresa especializada en desarrollo de software y
+          servicios tecnológicos. Nuestro equipo de programadores y analistas de
+          sistemas trabaja con pasión para crear soluciones innovadoras que
+          ayudan a las empresas a digitalizarse y optimizar sus procesos. Desde
+          aplicaciones web hasta sistemas empresariales complejos, nos adaptamos
+          a las necesidades específicas de cada cliente.
+        </p>
+        <p class="text-justify">
+          Nuestra filosofía se basa en la excelencia técnica, la innovación
+          constante y el compromiso con nuestros clientes. Utilizamos
+          metodologías ágiles para garantizar entregas eficientes y mantenemos
+          un enfoque en la calidad del código y la experiencia del usuario.
+          Creemos que la tecnología debe ser accesible y útil para todos, por
+          eso trabajamos para hacer que las soluciones complejas sean simples y
+          efectivas.
+        </p>
+      </article>
+      <!-- fin de Article -->
+
+      <aside class="col-12 col-md-4 p-1">
+        <img
+          src="{{ url_for('static', filename='img/Robot.svg') }}"
+          alt="Nosotros"
+        />
+      </aside>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
